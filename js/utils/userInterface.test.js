@@ -9,4 +9,12 @@ describe('isActivePath', () => {
     expect(isActivePath('/', '/')).toBe(true);
     expect(isActivePath('/', '/index.html')).toBe(true);
   });
+
+  it('returns true when current path includes the href', () => {
+    expect(isActivePath('/venue/', '/venue/index.html')).toBe(true);
+  });
+
+  it('returns false when paths do not match', () => {
+    expect(isActivePath('/login/', '/register/')).toBe(false);
+  });
 });
