@@ -8,9 +8,10 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky" ,
+    "prepare": "husky",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
   },
   "lint-staged": {
     "*.js": [
@@ -26,8 +27,12 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "dotenv": "^18.0.5",
     "eslint": "^10.11.0",
     "globals": "^17.12.0",
+    "http-server": "^14.1.1",
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
