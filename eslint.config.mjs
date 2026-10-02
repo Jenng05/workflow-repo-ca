@@ -38,4 +38,11 @@ export default [
       },
     },
   },
+    // Playwright-tester kjører i Node
+  {
+    files: ['tests/e2e/**/*.js'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
 ];

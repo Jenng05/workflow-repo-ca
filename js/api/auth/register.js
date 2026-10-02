@@ -18,5 +18,5 @@ export async function register(user) {
     throw new Error('Sorry, sign up failed.');
   }
 
-  return json;
+  return json.data;
 }
